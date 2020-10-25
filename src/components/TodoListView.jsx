@@ -2,15 +2,15 @@ import * as React from "react";
 import { observer } from "mobx-react";
 import TodoView from "./TodoView";
 
-const TodoListView = observer(({ todoList }) => {
+
+
+const TodoListView = observer(({ rootStore }) => {
+
+    console.log(rootStore.todoList)
     return (
         <div>
-            <ul>
-                {todoList.todos.map(todo => (
-                    <TodoView todo={todo} key={todo.id} />
-                ))}
-            </ul>
-        Tasks left: {todoList.unfinishedTodoCount}
+
+        
         </div>)
 })
 
