@@ -1,7 +1,8 @@
 import TodoListView from './TodoListView'
-import store from '../state/RootStore'
+import RootStore from '../state/RootStore'
 
 const Root = () => {
+    const store = new RootStore();
     return <TodoListView rootStore={store} />
 }
 

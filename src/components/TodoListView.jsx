@@ -6,11 +6,14 @@ import TodoView from "./TodoView";
 
 const TodoListView = observer(({ rootStore }) => {
 
-    console.log(rootStore.todoList)
     return (
         <div>
-
-        
+            <ul>
+                {rootStore.todoList.todos.map(todo => (
+                    <TodoView todo={todo} key={todo.id} />
+                ))}
+            </ul>
+    Tasks left: {rootStore.todoList.unfinishedTodoCount}
         </div>)
 })
 

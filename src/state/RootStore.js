@@ -4,11 +4,13 @@ import Todo from './Todo'
 
 // const socket = new WebSocket('ws://127.0.0.1:6789');
 
-class RootStore {
-    todoList
 
-    constructor(){
-        this.todoList = new TodoList(this, [new Todo("Holy SHT!!")])
+
+class RootStore {
+    todoList;
+
+    constructor() {
+        this.todoList = new TodoList(this, [new Todo("Holy SHT!"), new Todo("This Is WORKING!!!")])
     }
 }
 

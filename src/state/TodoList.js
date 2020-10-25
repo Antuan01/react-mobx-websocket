@@ -1,10 +1,12 @@
-import { makeObservable, observable, computed } from "mobx"
+import { makeObservable, makeAutoObservable, observable, computed } from "mobx"
 
 class TodoList {
     rootStore
+
     todos = []
+
     get unfinishedTodoCount() {
-        return this.rootStore.TodoList.todos.filter(todo => !todo.finished).length
+        return this.todos.filter(todo => !todo.finished).length
     }
     // socket
     // status = socket.readyState
