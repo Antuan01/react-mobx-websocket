@@ -3,15 +3,18 @@ import { makeObservable, observable, action } from "mobx"
 class Todo {
     id = Math.random()
     title = ""
+    author = ""
     finished = false
 
-    constructor(title) {
+    constructor(title, author) {
         makeObservable(this, {
             title: observable,
             finished: observable,
-            toggle: action
+            toggle: action,
+            author: observable
         })
-        this.title = title
+        this.title = title;
+        this.author = author;
     }
 
     toggle() {

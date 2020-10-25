@@ -13,7 +13,7 @@ const TodoListView = observer(({ rootStore }) => {
                     <TodoView todo={todo} key={todo.id} />
                 ))}
             </ul>
-    Tasks left: {rootStore.todoList.unfinishedTodoCount}
+        <p> Tasks left: {rootStore.todoList.unfinishedTodoCount} </p>
         </div>)
 })
 

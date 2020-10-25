@@ -9,10 +9,12 @@ const TodoView = observer(({todo}) => {
     <li>
         <input
         type="checkbox"
-        checked={todo.finished}
+        defaultChecked={todo.finished}
         onClick={toggle}
         />
         {todo.title}
+        {todo.author}
+
     </li>
     )
 })
